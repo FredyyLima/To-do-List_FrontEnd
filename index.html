@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minhas Tarefas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand mb-0 text-white">Tarefas</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <form onsubmit="submitForm(event)" class="container" id="form">
+      <h2 class="text-center">Cadastro de Tarefas</h2>
+      <div class="row">
+        <div class="form-group col-6">
+          <label for="nome">Nome da tarefa:</label>
+          <input type="text" id="nome" name="nome" class="form-control">
+        </div>
+        <div class="form-group col-6">
+          <label for="descricao">Descrição:</label>
+          <input type="text" id="descricao" name="descricao" class="form-control">
+        </div>
+        <div class="form-group col-6">
+          <label for="prioridade">Prioridade:</label>
+          <input type="text" id="prioridade" name="prioridade" class="form-control">
+        </div>
+        <div class="form-group col-6">
+          <label for="stats">Status:</label>
+          <input type="text" id="stats" name="stats" class="form-control">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-6">
+          <label for="prazo">Prazo:</label>
+          <input type="text" id="prazo" name="prazo" class="form-control">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-group mt-3">
+            <button class="btn btn-success" type="submit">Cadastrar</button>
+            <button class="btn btn-danger">Cancelar</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="container">
+      <div class="row">
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="lista">
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+#card-body-cad{
+    background-color: rgb(87, 84, 84);
+    border-radius: 50px;
+    background-image: -moz-linear-gradient(70deg, rgba(0, 16, 233, 0.671) 20%, rgba(255, 255, 255, 0.575) 60%);
+    
+}
+#cad{
+    border-radius: 50px;
+    background-color: white;
+    border: 1px solid white;
+    text-align: center;
+    text-shadow: 5px 2px 20px blue;
+    color: black
+}
+
+.btn-cad, .btn-back{
+    border: 2px solid white;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn-cad{
+    background-color: rgb(10, 189, 10);
+}
+.btn-cad:hover{
+    background-color: rgb(9, 209, 9);
+    color: white;
+}
+.btn-back{
+    background-color: rgb(214, 15, 15);
+}
+.btn-back:hover{
+    background-color: rgb(240, 12, 12);
+    color: white;
+}
