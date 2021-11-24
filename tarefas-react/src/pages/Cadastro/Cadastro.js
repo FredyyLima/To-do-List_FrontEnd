@@ -8,7 +8,6 @@ const Cadastro = () => {
   
   const handleSubmit = async (evento) => {
     evento.preventDefault();
-    // target = quem disparou o evento
     console.log(evento.target);
     const titulo = evento.target.titulo.value;
     const descricao = evento.target.descricao.value;

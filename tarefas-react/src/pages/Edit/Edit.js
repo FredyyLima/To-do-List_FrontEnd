@@ -5,7 +5,7 @@ import '../Edit/edit.css'
 
 const Edit = () => {
   const navigate = useNavigate();
-  //declarar o estado da musica
+
   const [tarefa, setTarefa] = useState({
     titulo: '',
     descricao: '',
@@ -18,11 +18,8 @@ const Edit = () => {
     getTarefaById();
   }, []);
 
-  // buscar a musica que ja foi cadastrado no banco.
-  // buscar a musica pelo o id passado via parametro da url.
   const { id } = useParams();
 
-  //buscar a musica por id;
   const getTarefaById = async () => {
     const request = await Api.fetchGetById(id);
     const tarefa = await request.json();
@@ -30,12 +27,8 @@ const Edit = () => {
   };
 
   const handleFieldsChange = (evento) => {
-    // copio o objeto do estado.
     const tarefaEdit = { ...tarefa };
-    // musicaEdit['titulo'] = 'novo valor'
-    // atualiza os campos do objeto de forma dinamica de acordo com o input que o usuario digitou
    tarefaEdit[evento.target.name] = evento.target.value;
-    // atualzo estado musica
     setTarefa(tarefaEdit);
   }
 

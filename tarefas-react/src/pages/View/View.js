@@ -7,28 +7,21 @@ import Api from '../../api/api';
 import './View.css'
 
 const View = () => {
-  // inicializa o estado musica para poder fazer as alteracoes do dom.
   const [tarefa, setTarefa] = useState({});
-  // crio o estado de abertura do modal;
   const [open, setOpen] = useState(false);
 
   const navigate = useNavigate();
 
-  // funcoes de abertura e fechamento do modal
   const AbreModal = () => setOpen(true);
   const FechaModal = () => setOpen(false);
 
-  // chama o use effect sem parametro de dependencia (executa uma vez ao renderizar o componente)
-  // chamando a funcao getMusicaById
   useEffect(() => {
     getTarefaById();
   }, [])
 
-  // acessa o id no parametro da url;
   const { id } = useParams();
   console.log(id);
 
-  // faz a chamada para a api passando o id como parametro para buscar o objeto da musica (invidual por id)
   const getTarefaById = async () => {
     const request = await Api.fetchGetById(id);
     const tarefa = await request.json();

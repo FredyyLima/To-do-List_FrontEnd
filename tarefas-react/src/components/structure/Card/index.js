@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './card.css'
 
 const Card = (props) => {
-  // objeto musica
   const tarefa = props.data;
   return (
     <Link to={`/view/${tarefa._id}`} className="col" id="link">
